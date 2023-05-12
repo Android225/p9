@@ -1,4 +1,4 @@
-package com.example.p9;
+package com.example.p9.UI.Views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.p9.R;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btnSendMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String text = "ТЕКСТ ДЕЛИТСЯ";
+                String text = "ТУТ ТЕКСТ";
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 intent.putExtra(Intent.EXTRA_TEXT, text);
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 // Обработка изображений
                 Uri imageUri = intent.getParcelableExtra(Intent.EXTRA_STREAM);
                 if (imageUri != null) {
-                    // Здесь будет обрабатываться изображение
+                    //  тут обрабатываться изображение
                 }
             }
         }
